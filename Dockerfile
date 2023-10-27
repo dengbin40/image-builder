@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/openjdk/jdk:11-ubuntu
+FROM --platform=linux/arm64 mcr.microsoft.com/openjdk/jdk:11-ubuntu
 RUN apt-get update && apt-get install --assume-yes libjpeg-dev zlib1g-dev gfortran libopenblas-dev liblapack-dev libatlas-base-dev libblas-dev  -y \
     && apt-get --assume-yes install python3.9 git python3-distutils curl -y  \
     && update-alternatives --install /usr/bin/python python /usr/bin/python3.9 1 \
